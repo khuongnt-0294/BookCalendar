@@ -8,4 +8,6 @@ class Schedule < ActiveRecord::Base
   validates :finish_time, presence: true
   validates :room, presence: true
   validates :user, presence: true
+
+  scope :today_schedule, -> {where(date: Time.now.to_date.to_s)}
 end

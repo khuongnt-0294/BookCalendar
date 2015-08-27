@@ -17,6 +17,9 @@
       <div class="row">
         <aside class="col-md-2">
           <h3>Schedules</h3>
+          <% if user_signed_in? %>
+            <%= render @feed_items %>
+          <% end %>
         </aside>
 
         <div class="col-md-8">
