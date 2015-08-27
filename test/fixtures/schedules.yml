@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: MyString
+  description: MyText
+  date: 2015-08-27
+  start_time: 2015-08-27 09:08:36
+  finish_time: 2015-08-27 09:08:36
+  state: MyString
+  user_id: 
+  room_id: 
+
+two:
+  event: MyString
+  description: MyText
+  date: 2015-08-27
+  start_time: 2015-08-27 09:08:36
+  finish_time: 2015-08-27 09:08:36
+  state: MyString
+  user_id: 
+  room_id: 
