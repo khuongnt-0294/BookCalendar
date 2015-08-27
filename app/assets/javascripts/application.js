@@ -16,9 +16,22 @@
 //= require bootstrap
 //= require moment
 //= require fullcalendar
+//= require bootstrap-datepicker
 
 $(document).ready(function() {
   $('#calendar').fullCalendar({
     height: $(window).height() - 180
-  })
+  });
+  $('#datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    clearBtn: true,
+    daysOfWeekDisabled: [0,6],
+    todayBtn: true,
+    todayHighlight: true,
+    startDate: 'Beginning of time'
+  });
 });
+
+
+
