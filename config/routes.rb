@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'static_pages#home'
+  root 'pages#home'
 
-  get 'help' => 'static_pages#help'
+  get 'help' => 'pages#help'
 
   namespace :admin do
 

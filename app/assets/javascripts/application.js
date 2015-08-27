@@ -13,9 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap
+//= require moment
+//= require fullcalendar
 
 $(document).ready(function() {
-  $('#calendar').fullCalendar()
-})
+  $('#calendar').fullCalendar({
+    height: $(window).height() - 180
+  })
+});
