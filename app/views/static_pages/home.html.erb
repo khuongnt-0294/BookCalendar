@@ -3,3 +3,6 @@
   <h1>Welcome to the BookCalendar System</h1>
   <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
 </div>
+<% if user_signed_in? %>  
+  <%= "admin : " + current_user.name if current_user.is_admin? %>
+<% end %>  
