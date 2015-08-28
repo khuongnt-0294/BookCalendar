@@ -1,18 +1,9 @@
-<tr id="schedule_<%= schedule.id %>">
-  <td>
-    <div class="col-md-12"><%= schedule.title %></div>
-  </td>
-  <td>
-    <div class="col-md-12"><%= schedule.start_time %></div>
-  </td>
-  <td>
-    <div class="col-md-12"><%= schedule.finish_time %></div>
-  </td>
-  <td>
-    <div class="col-md-12"><%= schedule.user.name %></div>
-  </td>
-  <td>
-    <div class="col-md-12"><%= schedule.room.name %></div>
-  </td>
-  <td></td>
-</tr>
+<ul>
+  <div><b><%= schedule.title %></b>  by: <%= schedule.user.name %></div>
+  <div>Location: <%= schedule.room.name %></div>
+  <div>
+    From : <%= schedule.start_time.strftime('%H:%M') %>
+    to : <%= schedule.finish_time.strftime('%H:%M') %>
+  </div>
+  <div>Day: <%= schedule.start_time.to_date.to_s %></div>
+</ul> 
