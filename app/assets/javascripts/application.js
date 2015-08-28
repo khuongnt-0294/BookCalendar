@@ -18,6 +18,7 @@
 //= require moment
 //= require fullcalendar
 //= require bootstrap-datepicker
+//= require websocket_rails/main
 
 $(document).ready(function() {
   $('#calendar').fullCalendar({
@@ -29,6 +30,8 @@ $(document).ready(function() {
     right: 'month,agendaWeek,agendaDay'
     },
     defaultView: 'month',
+    defaultDate: new Date(), //'2015-02-12'
+    eventLimit: true, // allow "more" link when too many events
   });
   $('#datepicker').datepicker({
     format: 'yyyy-mm-dd',
