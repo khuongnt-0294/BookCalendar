@@ -30,17 +30,16 @@ $(document).ready(function() {
     right: 'month,agendaWeek,agendaDay'
     },
     defaultView: 'month',
-    defaultDate: new Date(), //'2015-02-12'
-    eventLimit: true, // allow "more" link when too many events
+    defaultDate: new Date(),
+    eventLimit: true,
   });
-  $('#datepicker').datepicker({
-    format: 'yyyy-mm-dd',
-    autoclose: true,
+  $('.datepicker').datepicker({
     clearBtn: true,
-    // daysOfWeekDisabled: [0,6],
     todayBtn: true,
     todayHighlight: true,
-    startDate: 'Beginning of time'
+    startDate: 'Beginning of time',
+    dayViewHeaderFormat: 'DD - MM - YYYY',
+    autoclose: true,
   });
 });
 

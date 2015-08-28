@@ -32,6 +32,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'jquery-turbolinks'
 gem 'combined_time_select', '~> 1.0.1'
 gem 'websocket-rails'
+gem 'json'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
