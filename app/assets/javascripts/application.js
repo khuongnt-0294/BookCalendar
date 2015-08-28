@@ -21,13 +21,20 @@
 
 $(document).ready(function() {
   $('#calendar').fullCalendar({
-    height: $(window).height() - 180
+    height: $(window).height() - 180,
+    editable: true,
+    header: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'month,agendaWeek,agendaDay'
+    },
+    defaultView: 'month',
   });
   $('#datepicker').datepicker({
     format: 'yyyy-mm-dd',
     autoclose: true,
     clearBtn: true,
-    daysOfWeekDisabled: [0,6],
+    // daysOfWeekDisabled: [0,6],
     todayBtn: true,
     todayHighlight: true,
     startDate: 'Beginning of time'
