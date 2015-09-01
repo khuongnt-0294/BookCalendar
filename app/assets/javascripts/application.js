@@ -17,31 +17,11 @@
 //= require bootstrap
 //= require moment
 //= require fullcalendar
-//= require bootstrap-datepicker
+//= require bootstrap-datetimepicker
 //= require websocket_rails/main
+//= require select2
+//= require custom
 
-$(document).ready(function() {
-  $('#calendar').fullCalendar({
-    height: $(window).height() - 180,
-    editable: true,
-    header: {
-    left: 'prev,next today',
-    center: 'title',
-    right: 'month,agendaWeek,agendaDay'
-    },
-    defaultView: 'month',
-    defaultDate: new Date(),
-    eventLimit: true,
-  });
-  $('.datepicker').datepicker({
-    clearBtn: true,
-    todayBtn: true,
-    todayHighlight: true,
-    startDate: 'Beginning of time',
-    dayViewHeaderFormat: 'DD - MM - YYYY',
-    autoclose: true,
-  });
-});
 
 
 

@@ -26,4 +26,5 @@ puts "Create 20 schedules"
   schedule.user = User.all[user_random_id]
   schedule.room = Room.all[room_random_id]
   schedule.save
-end  
+end
+  

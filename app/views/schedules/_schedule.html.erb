@@ -1,12 +1,9 @@
-<tr>
-  <ul>
-    <li>
-      <td><%= schedule.title %></td><br/>
-      <td><%= schedule.description %></td><br/>
-      <td><%= schedule.start_time %></td><br/>
-      <td><%= schedule.finish_time %></td><br/>
-      <td><%= schedule.user.name %></td><br/>
-      <td><%= schedule.room.name %></td>
-    </li>  
-  </ul>
-</tr>
+<li>
+  <div><b><%= schedule.title %></b></div>
+  <p><small>Created by: <%= schedule.user.name %></small></p>
+  <p>Phong: <%= schedule.room.name %></p>
+  <div>
+    From : <%= schedule.start_time.strftime('%H:%M') %>
+    to : <%= schedule.finish_time.strftime('%H:%M') %>
+  </div>
+</li>

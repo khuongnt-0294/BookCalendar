@@ -1,6 +1,14 @@
 class SchedulesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :get_schedule_to_day, only: [:new, :edit]
+
+  def index
+    @schedules = Schedule.all
+    respond_to do |format|
+      format.html
+      format.json {render json: {schedules: @schedules.as_json}}
+    end
+  end
 
   def new
     @schedule = Schedule.new
@@ -35,11 +43,10 @@ class SchedulesController < ApplicationController
     end
   end
 
-
   private
   def schedule_params
     params.require(:schedule).permit :title, :start_time, :finish_time,
-                                      :description, :room_id
+      :description, :room_id
   end
 
   def get_schedule_to_day

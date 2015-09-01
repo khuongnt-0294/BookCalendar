@@ -5,7 +5,7 @@ class CreateSchedules < ActiveRecord::Migration
       t.text :description
       t.datetime :start_time
       t.datetime :finish_time
-      t.string :state
+      t.string :state, default: "pending"
       t.references :user, index: true, foreign_key: true
       t.references :room, index: true, foreign_key: true
 
